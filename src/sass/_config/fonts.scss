@@ -1,0 +1,33 @@
+@mixin font($font_name, $file_name, $weight) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    font-style: normal;
+    font-weight: $weight;
+    src: url("../font/#{$file_name}.eot");
+    src: url("../font/#{$file_name}.eot?#iefix") format("embedded-opentype"),
+    url("../font/#{$file_name}.woff") format("woff"),
+    url("../font/#{$file_name}.woff2") format("woff2"),
+    url("../font/#{$file_name}.ttf") format("truetype");
+  }
+}
+
+@include font("Lab Grotesque", "LabGrotesqueRegular", 400);
+@include font("Lab Grotesque", "LabGrotesqueMedium", 500);
+@include font("Lab Grotesque", "LabGrotesqueBold", 700);
+@include font("Lab Grotesque", "LabGrotesqueBlack", 900);
+
+@mixin fontReg() {
+  font-family: "Lab Grotesque", sans-serif;
+  font-weight: 400;
+}
+
+@mixin fontMed() {
+  font-family: "Lab Grotesque", sans-serif;
+  font-weight: 500;
+}
+
+@mixin fontBold() {
+  font-family: "Lab Grotesque", sans-serif;
+  font-weight: bold;
+}

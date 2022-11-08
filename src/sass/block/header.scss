@@ -1,0 +1,9 @@
+.header {
+  &__content {
+    margin-top: 60px;
+    @include fontMed();
+    font-size: 42px;
+    line-height: 120%;
+    color: $color-basic-black;
+  }
+}

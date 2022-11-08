@@ -1,0 +1,44 @@
+<aside class="aside-form" id="aside_form">
+   <span class="aside-form__cross" id="cross_credit"></span>
+   <h2 class="aside-form__title">
+      Рассчитать ежемесячный платеж
+   </h2>
+   <div class="aside-form__content">
+      <div class="aside-form__rate">
+         <div class="aside-form__text">
+            Ставка
+         </div>
+         <div class="aside-form__text_gray">
+            5,49%
+         </div>
+      </div>
+      <div class="aside-form__control">
+         <label class="aside-form__text">
+            Первоначальный взнос
+         </label>
+         <label class="range-wrp">
+            <input type="text" class="aside-form__input range-wrp__inp" id="inp_donate_text" placeholder="2 750 000 ₽">
+            <span class="aside-form__span range-wrp__text" id="donate_percent">25%</span>
+            <input type="range" step="5000" class="aside-form__range range-wrp__range" id="inp_donate_range">
+         </label>
+      </div>
+      <div class="aside-form__control aside-form__control_last">
+         <label class="aside-form__text">
+            Срок ипотеки
+         </label>
+         <label class="range-wrp">
+            <input type="text" class="aside-form__input range-wrp__inp" id="inp_period_text" placeholder="30 лет">
+            <input type="range" step="1" class="aside-form__range range-wrp__range" id="inp_period_range">
+         </label>
+      </div>
+      <div class="aside-form__info">
+         <div class="aside-form__text">
+            Ваш платёж
+         </div>
+         <div class="aside-form__text_graybold" id="credit_payment">
+            от 10 204 ₽ / мес.
+         </div>
+      </div>
+   </div>
+   <button class="aside-form__btn btn btn-red" id="credit_success">Применить</button>
+</aside>

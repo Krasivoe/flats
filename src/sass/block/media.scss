@@ -1,0 +1,215 @@
+//width
+@media screen and (max-width: 1110px) {
+  .container {
+    max-width: 768px;
+  }
+  .header {
+    &__content {
+      margin-top: 48px;
+      margin-left: 20px;
+    }
+  }
+  .cards {
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 425px;
+    &__play {
+      left: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    max-width: 375px;
+    padding: 48px 20px;
+  }
+  .header {
+    &__content {
+      font-size: 32px;
+      margin: 0;
+    }
+  }
+  .cards {
+    row-gap: 30px;
+  }
+  .card {
+    &__play {
+      left: 15px;
+    }
+  }
+  //modal-prise
+  .price-form {
+    width: 320px;
+    min-height: 410px;
+    &__top {
+      padding: 24px 16px 0 16px;
+    }
+    &__title {
+      margin-bottom: 30px;
+      font-size: 24px;
+      line-height: 120%;
+    }
+    &__control {
+      margin-bottom: 13px;
+      & label {
+        font-size: 14px;
+        line-height: 120%;
+      }
+      & input {
+        font-size: 12px;
+      }
+      &_last {
+        margin-bottom: 23px;
+      }
+    }
+    &__btn {
+      margin-bottom: 20px;
+    }
+    &__bottom {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 0 16px 25px;
+    }
+    &__text {
+      width: 256px;
+      height: 80px;
+      font-size: 12px;
+    }
+  }
+  //modal-confirm
+  .confirm-form {
+    width: 320px;
+    height: 403px;
+    margin: 0;
+    padding: 86px 20px 48px 20px;
+    &__img {
+      margin-bottom: 18px;
+    }
+    &__title {
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+    &__subtitle {
+      font-size: 14px;
+    }
+  }
+  .modal {
+    &__cross {
+      top: 20px;
+      right: 20px;
+      width: 16px;
+      height: 16px;
+      background: url("../img/elements/white-cross-mob.svg") no-repeat center;
+    }
+  }
+
+  .aside-form {
+    width: 307px;
+    padding: 24px 20px 0 20px;
+    &__cross {
+      top: 19px;
+      right: 20px;
+      width: 16px;
+      height: 16px;
+      background: url("../img/elements/black-cross-mob.svg") no-repeat center;
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__content {
+      margin-top: 48px;
+    }
+    &__rate,
+    &__control,
+    &__info {
+      font-size: 16px;
+    }
+    &__rate,
+    &__info {
+      gap: 4px;
+    }
+    &__control {
+      gap: 12px;
+      margin-top: 32px;
+      &_last {
+        margin-top: 37px;
+      }
+      & input,
+      & span {
+        font-size: 16px;
+      }
+    }
+    &__input {
+      width: 265px;
+      height: 45px;
+    }
+    &__span {
+      top: 15px;
+      right: 20px;
+    }
+    &__range {
+      top: -1px;
+      width: 264px;
+      height: 2px;
+      &::-webkit-slider-thumb {
+        width: 16px;
+        height: 16px;
+      }
+      &::-moz-range-thumb {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &__text {
+      &_graybold {
+        font-size: 20px;
+      }
+    }
+    &__info {
+      margin-top: 51px;
+    }
+    &__btn {
+      margin-top: 32px;
+      line-height: 130%;
+    }
+  }
+}
+
+//height
+@media screen and (max-height: 800px) {
+  .aside-form {
+    padding-top: 60px;
+    overflow-y: auto;
+    &__cross {
+      top: 20px;
+      right: 20px;
+    }
+    &__content {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .price-form,
+  .confirm-form {
+    margin-top: 250px;
+  }
+  .modal {
+    &__cross {
+      top: 20px;
+      right: 20px;
+      width: 16px;
+      height: 16px;
+      background: url("../img/elements/white-cross-mob.svg") no-repeat center;
+    }
+  }
+}

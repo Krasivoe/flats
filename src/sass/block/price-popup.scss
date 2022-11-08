@@ -1,0 +1,70 @@
+.price-form {
+  position: absolute;
+  z-index: 20;
+  max-width: 450px;
+  min-height: 516px;
+  color: $color-basic-black;
+  border-radius: 12px;
+  background: $color-white;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+  &__top {
+    padding: 50px 40px 0 40px;
+  }
+  &__title {
+    margin-bottom: 30px;
+    @include fontMed();
+    font-size: 32px;
+    line-height: 125%;
+  }
+  &__control {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 20px;
+    & label {
+      @include fontReg();
+      font-size: 18px;
+      line-height: 140%;
+      & span {
+        color: $color-red;
+      }
+    }
+    &_last {
+      margin-bottom: 30px;
+    }
+  }
+  &__btn {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 40px;
+    line-height: 120%;
+  }
+  &__bottom {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0 8px 50px 40px;
+  }
+  &__text {
+    width: 367px;
+    height: 72px;
+    @include fontReg();
+    font-size: 14px;
+    line-height: 130%;
+    & span {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      transition: opacity 0.9s;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

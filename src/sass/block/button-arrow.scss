@@ -1,0 +1,35 @@
+.btn-play {
+  @include flex-center();
+  width: 48px;
+  height: 48px;
+  border: 1px solid $color-pink;
+  border-radius: 50%;
+  filter: drop-shadow(0 -0.13px 20px rgba(183, 187, 225, 0.33));
+  transition: all 0.3s linear;
+  cursor: pointer;
+  &__round {
+    @include flex-center();
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: $color-pink;
+    box-shadow: 0 0 51px #cfdae7;
+    transition: all 0.3s linear;
+  }
+  &__arrow {
+    @include flex-center();
+    width: 26px;
+    height: 26px;
+    background: url("../img/arrow/arrow.svg") center no-repeat;
+    transition: all 0.3s linear;
+  }
+  &:hover {
+    border-color: $color-red-arrow;
+    .btn-play__round {
+      background: $color-red-arrow;
+    }
+    .btn-play__arrow {
+      background: url("../img/arrow/arrow-hover.svg") center no-repeat;
+    }
+  }
+}

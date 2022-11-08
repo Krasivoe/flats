@@ -1,0 +1,47 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  overflow-y: auto;
+  visibility: visible;
+  opacity: 0;
+  transition: all 0.3s linear;
+  &.open {
+    z-index: 100;
+    min-height: 100vh;
+    visibility: visible;
+    opacity: 1;
+  }
+  &__cross {
+    position: absolute;
+    z-index: 100;
+    top: 60px;
+    right: 60px;
+    width: 25px;
+    height: 25px;
+    background: url("../img/elements/white-cross.svg") center no-repeat;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s linear;
+    &:hover {
+      background: url("../img/elements/black-cross.svg") center no-repeat;
+    }
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+#video_modal {
+  backdrop-filter: none;
+}

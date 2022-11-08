@@ -1,0 +1,118 @@
+.input {
+  @include fontReg();
+  line-height: 130%;
+  color: $color-basic-black;
+  padding: 10px;
+  border: 1px solid $color-light;
+  border-radius: 6px;
+  background: $color_white;
+  opacity: 0.7;
+  transition: all 0.3s linear;
+  &:hover {
+    border: 1px solid $color-black;
+  }
+  &:focus {
+    color: $color-black;
+    border: 1px solid $color-black;
+    opacity: 1;
+  }
+  &.invalid {
+    color: $color-black;
+    border: 1px solid $color-red;
+  }
+}
+
+.checkbox {
+  & input {
+    display: none;
+    &:checked ~ .checkmark {
+      border: 0;
+      background: linear-gradient(255deg, #dc3131 0.83%, rgba(255, 79, 79, 0) 109%), #ff5e56;
+    }
+    &:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+  .checkmark {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $color-light;
+    border-radius: 50%;
+    background: $color-white;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    &:after {
+      position: relative;
+      top: 4px;
+      left: 5px;
+      display: none;
+      width: 12px;
+      height: 8px;
+      content: url("../img/arrow/checkbox.svg");
+    }
+    &:hover {
+      border: 1px solid $color-black;
+    }
+    &.invalid {
+      border: 1px solid $color-red;
+    }
+  }
+}
+
+.range-wrp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 265px;
+  @include fontReg();
+  font-size: 16px;
+  line-height: 120%;
+  &__inp {
+    color: $color-basic-black;
+    padding: 0 10px;
+    border: 1px solid $color-light;
+    border-radius: 7px 7px 0 0;
+    opacity: 0.7;
+    transition: all 0.3s linear;
+    &:hover,
+    &:focus {
+      border: 1px solid $color-black;
+    }
+  }
+  &__text {
+    color: $color-basic-black;
+    opacity: 0.7;
+    position: absolute;
+  }
+  &__range {
+    position: relative;
+    background: #c4c4c4;
+    -webkit-appearance: none;
+    &::-webkit-slider-thumb {
+      width: 12px;
+      height: 12px;
+      -webkit-appearance: none;
+      border: 0;
+      border-radius: 50%;
+      background: linear-gradient(255deg, #dc3131 0.83%, rgba(255, 79, 79, 0) 109%), #ff5e56;
+      transition: all 0.1s;
+      &:hover {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &::-moz-range-thumb {
+      width: 12px;
+      height: 12px;
+      border: 0;
+      border-radius: 50%;
+      background: linear-gradient(255deg, #dc3131 0.83%, rgba(255, 79, 79, 0) 109%), #ff5e56;
+      transition: all 0.1s;
+      &:hover {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

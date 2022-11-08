@@ -1,0 +1,90 @@
+.aside-form {
+  position: fixed;
+  z-index: 20;
+  right: -420px;
+  top: 0;
+  width: 420px;
+  height: 100vh;
+  padding: 145px 40px 0 40px;
+  color: $color-basic-black;
+  background: $color-white;
+  transition: right 0.3s linear;
+  &.open {
+    right: 0;
+  }
+  &__cross {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: url("../img/elements/black-cross.svg") no-repeat center;
+    top: 60px;
+    right: 40px;
+    cursor: pointer;
+  }
+  &__title {
+    @include fontMed();
+    font-size: 32px;
+    line-height: 120%;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+  }
+  &__rate,
+  &__control,
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+    line-height: 120%;
+  }
+  &__text {
+    @include fontMed();
+    &_gray {
+      @include fontReg();
+      opacity: 0.7;
+    }
+    &_graybold {
+      @include fontMed();
+      font-size: 22px;
+      opacity: 0.7;
+    }
+  }
+  &__control {
+    margin-top: 18px;
+    &_last {
+      margin-top: 24px;
+    }
+    & input,
+    & span {
+      @include fontReg();
+      font-size: 18px;
+      line-height: 120%;
+    }
+  }
+  &__input {
+    width: 291px;
+    height: 54px;
+  }
+  &__span {
+    top: 18px;
+    right: 0;
+  }
+  &__range {
+    top: -2px;
+    width: 290px;
+    height: 3px;
+  }
+  &__info {
+    margin-top: 24px;
+  }
+  &__btn {
+    width: 100%;
+    height: 50px;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    line-height: 150%;
+  }
+}

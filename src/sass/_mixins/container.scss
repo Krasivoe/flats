@@ -1,0 +1,10 @@
+@mixin wrapper() {
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+@mixin container() {
+  max-width: 1150px;
+  margin: 0 auto;
+}

@@ -1,0 +1,10 @@
+.error {
+  display: none;
+  @include fontReg();
+  font-size: 10px;
+  line-height: 120%;
+  color: $color-red;
+  &.visible {
+    display: inline;
+  }
+}

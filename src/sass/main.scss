@@ -1,0 +1,64 @@
+//Настройки
+@import "_config/variables";
+@import "_config/fonts";
+
+//Миксины
+@import "_mixins/reset";
+@import "_mixins/container";
+@import "_mixins/flex-center";
+
+//Компоненты
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  @include reset-model();
+}
+
+button {
+  @include reset-button();
+}
+
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+
+.wrapper {
+  @include wrapper();
+}
+
+.container {
+  @include container();
+}
+
+html,
+body {
+  @include reset-model();
+  min-height: 100vh;
+  background-color: #fff;
+  @include fontReg();
+  font-size: 14px;
+  line-height: 130%;
+}
+
+//Импорт блоков
+
+//UI
+@import "block/button-arrow.scss";
+@import "block/buttons.scss";
+@import "block/inputs.scss";
+@import "block/error.scss";
+//Blocks
+@import "block/header.scss";
+@import "block/card.scss";
+//Modal
+@import "block/modal.scss";
+@import "block/price-popup.scss";
+@import "block/confirm-popup.scss";
+@import "block/aside.scss";
+@import "block/video.scss";
+//Media
+@import "block/media.scss";

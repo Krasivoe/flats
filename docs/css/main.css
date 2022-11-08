@@ -1,0 +1,978 @@
+@font-face {
+  font-family: "Lab Grotesque";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/LabGrotesqueRegular.eot");
+  src: url("../font/LabGrotesqueRegular.eot?#iefix") format("embedded-opentype"), url("../font/LabGrotesqueRegular.woff") format("woff"), url("../font/LabGrotesqueRegular.woff2") format("woff2"), url("../font/LabGrotesqueRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lab Grotesque";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../font/LabGrotesqueMedium.eot");
+  src: url("../font/LabGrotesqueMedium.eot?#iefix") format("embedded-opentype"), url("../font/LabGrotesqueMedium.woff") format("woff"), url("../font/LabGrotesqueMedium.woff2") format("woff2"), url("../font/LabGrotesqueMedium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lab Grotesque";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/LabGrotesqueBold.eot");
+  src: url("../font/LabGrotesqueBold.eot?#iefix") format("embedded-opentype"), url("../font/LabGrotesqueBold.woff") format("woff"), url("../font/LabGrotesqueBold.woff2") format("woff2"), url("../font/LabGrotesqueBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lab Grotesque";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 900;
+  src: url("../font/LabGrotesqueBlack.eot");
+  src: url("../font/LabGrotesqueBlack.eot?#iefix") format("embedded-opentype"), url("../font/LabGrotesqueBlack.woff") format("woff"), url("../font/LabGrotesqueBlack.woff2") format("woff2"), url("../font/LabGrotesqueBlack.ttf") format("truetype");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+button {
+  background: transparent;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+
+.wrapper {
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+html,
+body {
+  font: 400 14px/130% "Lab Grotesque", sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  min-height: 100vh;
+}
+
+.btn-play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #e9b8b8;
+  border-radius: 50%;
+  filter: drop-shadow(0 -0.13px 20px rgba(183, 187, 225, 0.33));
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.btn-play__round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #e9b8b8;
+  box-shadow: 0 0 51px #cfdae7;
+  transition: all 0.3s linear;
+}
+
+.btn-play__arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  background: url("../img/arrow/arrow.svg") center no-repeat;
+  transition: all 0.3s linear;
+}
+
+.btn-play:hover {
+  border-color: #db1921;
+}
+
+.btn-play:hover .btn-play__round {
+  background: #db1921;
+}
+
+.btn-play:hover .btn-play__arrow {
+  background: url("../img/arrow/arrow-hover.svg") center no-repeat;
+}
+
+.btn {
+  font: 500 12px "Lab Grotesque", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-red {
+  padding: 12px 75px 12px 74px;
+  background: linear-gradient(255deg, #dc3131 0.83%, rgba(255, 79, 79, 0) 109%), #ff5e56;
+  box-shadow: 0 0 24px rgba(234, 0, 41, 0.33);
+  transition: all 0.3s linear;
+}
+
+.btn-red:hover {
+  background: linear-gradient(255.35deg, #ea0029 0.83%, rgba(255, 79, 79, 0) 109%), #ea0029;
+  box-shadow: 0 4px 24px rgba(234, 0, 41, 0.33);
+}
+
+.btn-white {
+  border: 1px solid #fff;
+  background: transparent;
+  transition: all 0.3s linear;
+}
+
+.btn-white:hover,
+.btn-white:active {
+  color: #000;
+  background: #fff;
+}
+
+.input {
+  font-family: "Lab Grotesque", sans-serif;
+  font-weight: 400;
+  line-height: 130%;
+  color: #1a191f;
+  padding: 10px;
+  border: 1px solid #dfe3e6;
+  border-radius: 6px;
+  background: #fff;
+  opacity: 0.7;
+  transition: all 0.3s linear;
+}
+
+.input:hover {
+  border: 1px solid #000;
+}
+
+.input:focus {
+  color: #000;
+  border: 1px solid #000;
+  opacity: 1;
+}
+
+.input.invalid {
+  color: #000;
+  border: 1px solid #ea0029;
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkbox input:checked ~ .checkmark {
+  border: 0;
+  background: linear-gradient(255deg, #dc3131 0.83%, rgba(255, 79, 79, 0) 109%), #ff5e56;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox .checkmark {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #dfe3e6;
+  border-radius: 50%;
+  background: #fff;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.checkbox .checkmark:after {
+  position: relative;
+  top: 4px;
+  left: 5px;
+  display: none;
+  width: 12px;
+  height: 8px;
+  content: url("../img/arrow/checkbox.svg");
+}
+
+.checkbox .checkmark:hover {
+  border: 1px solid #000;
+}
+
+.checkbox .checkmark.invalid {
+  border: 1px solid #ea0029;
+}
+
+.range-wrp {
+  font: 400 16px/120% "Lab Grotesque", sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 265px;
+}
+
+.range-wrp__inp {
+  color: #1a191f;
+  padding: 0 10px;
+  border: 1px solid #dfe3e6;
+  border-radius: 7px 7px 0 0;
+  opacity: 0.7;
+  transition: all 0.3s linear;
+}
+
+.range-wrp__inp:hover,
+.range-wrp__inp:focus {
+  border: 1px solid #000;
+}
+
+.range-wrp__text {
+  color: #1a191f;
+  opacity: 0.7;
+  position: absolute;
+}
+
+.range-wrp__range {
+  position: relative;
+  background: #c4c4c4;
+  -webkit-appearance: none;
+}
+
+.range-wrp__range::-webkit-slider-thumb {
+  width: 12px;
+  height: 12px;
+  -webkit-appearance: none;
+  border: 0;
+  border-radius: 50%;
+  background: linear-gradient(255deg, #dc3131 0.83%, rgba(255, 79, 79, 0) 109%), #ff5e56;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.range-wrp__range::-webkit-slider-thumb:hover {
+  width: 16px;
+  height: 16px;
+}
+
+.range-wrp__range::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border: 0;
+  border-radius: 50%;
+  background: linear-gradient(255deg, #dc3131 0.83%, rgba(255, 79, 79, 0) 109%), #ff5e56;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.range-wrp__range::-moz-range-thumb:hover {
+  width: 16px;
+  height: 16px;
+}
+
+.error {
+  font: 400 10px/120% "Lab Grotesque", sans-serif;
+  display: none;
+  color: #ea0029;
+}
+
+.error.visible {
+  display: inline;
+}
+
+.header__content {
+  font: 500 42px/120% "Lab Grotesque", sans-serif;
+  margin-top: 60px;
+  color: #1a191f;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 52px;
+  row-gap: 50px;
+  margin-top: 55px;
+  margin-bottom: 60px;
+}
+
+.card {
+  background: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 335px;
+  height: 502px;
+  color: #1a191f;
+  padding: 32px 16px 24px;
+  border-radius: 30px;
+  box-shadow: 0 0 44px #cfdae7;
+}
+
+.card__play {
+  position: absolute;
+  top: 15px;
+}
+
+.card__image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 232px;
+}
+
+.card__title {
+  font: 500 16px/120% "Lab Grotesque", sans-serif;
+  margin-top: 44px;
+}
+
+.card__line {
+  width: 100%;
+  margin: 16px 0;
+  border: 1px solid #dfe3e6;
+  opacity: 0.4;
+}
+
+.card .accent {
+  font: 500 12px/130% "Lab Grotesque", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #1a191f;
+}
+
+.card .accent__left {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card .accent__left_meta {
+  font: bold 12px/120% "Lab Grotesque", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 24px;
+  color: #ea0029;
+  box-shadow: 0 0 28px rgba(234, 0, 41, 0.33);
+  border-radius: 5px;
+  background: #fff;
+}
+
+.card .accent__right {
+  width: 116px;
+}
+
+.card .accent__opacity {
+  opacity: 0.7;
+}
+
+.card .caption {
+  font: 500 14px/130% "Lab Grotesque", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.card .caption__left {
+  color: #000;
+}
+
+.card .caption__dashed {
+  min-width: 113px;
+  margin-right: 2px;
+  color: #ea0029;
+  border-bottom: 1px dashed rgba(213, 30, 41, 0.5);
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.card .caption__dashed:hover {
+  border-bottom: 1px dashed transparent;
+}
+
+.card__btn {
+  margin-top: 24px;
+  line-height: 130%;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  overflow-y: auto;
+  visibility: visible;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.modal.open {
+  z-index: 100;
+  min-height: 100vh;
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__cross {
+  position: absolute;
+  z-index: 100;
+  top: 60px;
+  right: 60px;
+  width: 25px;
+  height: 25px;
+  background: url("../img/elements/white-cross.svg") center no-repeat;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.modal__cross:hover {
+  background: url("../img/elements/black-cross.svg") center no-repeat;
+}
+
+.modal__cross.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+#video_modal {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+.price-form {
+  position: absolute;
+  z-index: 20;
+  max-width: 450px;
+  min-height: 516px;
+  color: #1a191f;
+  border-radius: 12px;
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+}
+
+.price-form.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.price-form__top {
+  padding: 50px 40px 0 40px;
+}
+
+.price-form__title {
+  font: 500 32px/125% "Lab Grotesque", sans-serif;
+  margin-bottom: 30px;
+}
+
+.price-form__control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.price-form__control label {
+  font: 400 18px/140% "Lab Grotesque", sans-serif;
+}
+
+.price-form__control label span {
+  color: #ea0029;
+}
+
+.price-form__control_last {
+  margin-bottom: 30px;
+}
+
+.price-form__btn {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 40px;
+  line-height: 120%;
+}
+
+.price-form__bottom {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 0 8px 50px 40px;
+}
+
+.price-form__text {
+  font: 400 14px/130% "Lab Grotesque", sans-serif;
+  width: 367px;
+  height: 72px;
+}
+
+.price-form__text span {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  transition: opacity 0.9s;
+  cursor: pointer;
+}
+
+.price-form__text span:hover {
+  opacity: 0.8;
+}
+
+.confirm-form {
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 450px;
+  height: 467px;
+  margin-bottom: 100px;
+  padding: 115px 40px 60px 40px;
+  color: #fff;
+  border-radius: 12px;
+  background: #fc5751;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+}
+
+.confirm-form.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.confirm-form__img {
+  margin-bottom: 20px;
+}
+
+.confirm-form__title {
+  font: 500 28px/120% "Lab Grotesque", sans-serif;
+  margin-bottom: 12px;
+}
+
+.confirm-form__subtitle {
+  font: 400 18px/140% "Lab Grotesque", sans-serif;
+  margin-bottom: 20px;
+}
+
+.confirm-form__btn {
+  width: 100%;
+  min-height: 40px;
+  line-height: 130%;
+}
+
+.aside-form {
+  position: fixed;
+  z-index: 20;
+  right: -420px;
+  top: 0;
+  width: 420px;
+  height: 100vh;
+  padding: 145px 40px 0 40px;
+  color: #1a191f;
+  background: #fff;
+  transition: right 0.3s linear;
+}
+
+.aside-form.open {
+  right: 0;
+}
+
+.aside-form__cross {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: url("../img/elements/black-cross.svg") no-repeat center;
+  top: 60px;
+  right: 40px;
+  cursor: pointer;
+}
+
+.aside-form__title {
+  font: 500 32px/120% "Lab Grotesque", sans-serif;
+}
+
+.aside-form__content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.aside-form__rate,
+.aside-form__control,
+.aside-form__info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+  line-height: 120%;
+}
+
+.aside-form__text {
+  font-family: "Lab Grotesque", sans-serif;
+  font-weight: 500;
+}
+
+.aside-form__text_gray {
+  font-family: "Lab Grotesque", sans-serif;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.aside-form__text_graybold {
+  font: 500 22px "Lab Grotesque", sans-serif;
+  opacity: 0.7;
+}
+
+.aside-form__control {
+  margin-top: 18px;
+}
+
+.aside-form__control_last {
+  margin-top: 24px;
+}
+
+.aside-form__control input,
+.aside-form__control span {
+  font: 400 18px/120% "Lab Grotesque", sans-serif;
+}
+
+.aside-form__input {
+  width: 291px;
+  height: 54px;
+}
+
+.aside-form__span {
+  top: 18px;
+  right: 0;
+}
+
+.aside-form__range {
+  top: -2px;
+  width: 290px;
+  height: 3px;
+}
+
+.aside-form__info {
+  margin-top: 24px;
+}
+
+.aside-form__btn {
+  width: 100%;
+  height: 50px;
+  margin-top: 48px;
+  margin-bottom: 24px;
+  line-height: 150%;
+}
+
+.video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  height: 100vh;
+}
+
+.video__content {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
+  background-size: 20%;
+  cursor: pointer;
+}
+
+.video__content iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1110px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .header__content {
+    margin-top: 48px;
+    margin-left: 20px;
+  }
+
+  .cards {
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 425px;
+  }
+
+  .card__play {
+    left: 60px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    max-width: 375px;
+    padding: 48px 20px;
+  }
+
+  .header__content {
+    font-size: 32px;
+    margin: 0;
+  }
+
+  .cards {
+    row-gap: 30px;
+  }
+
+  .card__play {
+    left: 15px;
+  }
+
+  .price-form {
+    width: 320px;
+    min-height: 410px;
+  }
+
+  .price-form__top {
+    padding: 24px 16px 0 16px;
+  }
+
+  .price-form__title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  .price-form__control {
+    margin-bottom: 13px;
+  }
+
+  .price-form__control label {
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  .price-form__control input {
+    font-size: 12px;
+  }
+
+  .price-form__control_last {
+    margin-bottom: 23px;
+  }
+
+  .price-form__btn {
+    margin-bottom: 20px;
+  }
+
+  .price-form__bottom {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 0 16px 25px;
+  }
+
+  .price-form__text {
+    width: 256px;
+    height: 80px;
+    font-size: 12px;
+  }
+
+  .confirm-form {
+    width: 320px;
+    height: 403px;
+    margin: 0;
+    padding: 86px 20px 48px 20px;
+  }
+
+  .confirm-form__img {
+    margin-bottom: 18px;
+  }
+
+  .confirm-form__title {
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+
+  .confirm-form__subtitle {
+    font-size: 14px;
+  }
+
+  .modal__cross {
+    top: 20px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    background: url("../img/elements/white-cross-mob.svg") no-repeat center;
+  }
+
+  .aside-form {
+    width: 307px;
+    padding: 24px 20px 0 20px;
+  }
+
+  .aside-form__cross {
+    top: 19px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    background: url("../img/elements/black-cross-mob.svg") no-repeat center;
+  }
+
+  .aside-form__title {
+    font-size: 24px;
+  }
+
+  .aside-form__content {
+    margin-top: 48px;
+  }
+
+  .aside-form__rate,
+  .aside-form__control,
+  .aside-form__info {
+    font-size: 16px;
+  }
+
+  .aside-form__rate,
+  .aside-form__info {
+    gap: 4px;
+  }
+
+  .aside-form__control {
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .aside-form__control_last {
+    margin-top: 37px;
+  }
+
+  .aside-form__control input,
+  .aside-form__control span {
+    font-size: 16px;
+  }
+
+  .aside-form__input {
+    width: 265px;
+    height: 45px;
+  }
+
+  .aside-form__span {
+    top: 15px;
+    right: 20px;
+  }
+
+  .aside-form__range {
+    top: -1px;
+    width: 264px;
+    height: 2px;
+  }
+
+  .aside-form__range::-webkit-slider-thumb {
+    width: 16px;
+    height: 16px;
+  }
+
+  .aside-form__range::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+  }
+
+  .aside-form__text_graybold {
+    font-size: 20px;
+  }
+
+  .aside-form__info {
+    margin-top: 51px;
+  }
+
+  .aside-form__btn {
+    margin-top: 32px;
+    line-height: 130%;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .aside-form {
+    padding-top: 60px;
+    overflow-y: auto;
+  }
+
+  .aside-form__cross {
+    top: 20px;
+    right: 20px;
+  }
+
+  .aside-form__content {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .price-form,
+  .confirm-form {
+    margin-top: 250px;
+  }
+
+  .modal__cross {
+    top: 20px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    background: url("../img/elements/white-cross-mob.svg") no-repeat center;
+  }
+}
